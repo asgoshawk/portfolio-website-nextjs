@@ -8,6 +8,32 @@
     html {
         font-family: Montserrat
     }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgb(203, 213, 225);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(51, 101, 138, 0.6);
+        border-radius: 5px;
+        border: 2.5px solid rgb(203, 213, 225);
+    }
+    
+    .dark::-webkit-scrollbar-track {
+        background: rgb(51, 65, 85);
+        /* background: transparent; */
+    }
+
+    .dark::-webkit-scrollbar-thumb {
+        background: rgba(233, 196, 106, 1);
+        border-radius: 5px;
+        border: 2px solid rgb(51, 65, 85);
+    }
+
 }
 
 @layer components {
@@ -69,35 +95,6 @@
         @apply my-4
     }
 
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
 
-    ::-webkit-scrollbar-track {
-        background: rgb(203, 213, 225);
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: rgba(51, 101, 138, 0.6);
-        border-radius: 5px;
-        border: 2.5px solid rgb(203, 213, 225);
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: rgba(51, 101, 138, 1);
-    }
-
-    .dark::-webkit-scrollbar-track {
-        background: rgb(51, 65, 85);
-    }
-
-    .dark::-webkit-scrollbar-thumb {
-        background: rgba(233, 196, 106, 0.6);
-        border: 2px solid rgb(51, 65, 85);
-    }
-
-    .dark::-webkit-scrollbar-thumb:hover {
-        background: rgba(233, 196, 106, 1);
-    }
 
 }

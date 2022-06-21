@@ -29,7 +29,7 @@ import { useState, useEffect } from "react";
 export const useDarkMode = () => {
     // const [enabled, setEnabled] = useLocalStorage('dark-theme');
     const [enabled, setEnabled] = useState(
-        typeof window !== "undefined" ? localStorage.getItem('dark-theme') : "dark"
+        typeof window !== "undefined" ? localStorage.getItem('data-theme') : "dark"
     );
 
     const isEnabled = typeof enabledState === 'undefined' && enabled;
@@ -39,7 +39,7 @@ export const useDarkMode = () => {
         const bodyClass = window.document.body.classList;
         isEnabled ? bodyClass.add(className) : bodyClass.remove(className);
         if (typeof window !== "undefined") {
-            localStorage.setItem('dark-theme', enabled)
+            localStorage.setItem('data-theme', enabled)
         }
     }, [enabled, isEnabled]);
 
