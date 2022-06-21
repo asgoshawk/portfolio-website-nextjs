@@ -1,16 +1,103 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Press+Start+2P&family=Roboto:wght@100;400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: Montserrat
+    }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer components {
 
-* {
-  box-sizing: border-box;
+    /* #navMenu.activate {
+        @apply block scale-y-100 h-auto opacity-100
+    } */
+
+    .shadow-9 {
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    .shadow-25 {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+
+    .shadow-28 {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+
+
+    .nav-toggler.is-open span:nth-child(1) {
+        @apply top-4 rotate-[405deg]
+    }
+
+    .nav-toggler.is-open span:nth-child(2) {
+        @apply scale-x-0
+    }
+
+    .nav-toggler.is-open span:nth-child(3) {
+        @apply top-4 rotate-[-405deg]
+    }
+
+    .markdown h1 {
+        @apply text-3xl font-semibold
+    }
+
+    .markdown h2 {
+        @apply text-2xl font-semibold
+    }
+
+    .markdown h3 {
+        @apply text-xl
+    }
+
+    .markdown h4 {
+        @apply text-lg
+    }
+
+    .markdown p {
+        @apply text-base text-justify
+    }
+
+    .markdown a {
+        @apply underline text-secondary dark:text-primary
+    }
+
+    .markdown img {
+        @apply my-4
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgb(203, 213, 225);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(51, 101, 138, 0.6);
+        border-radius: 5px;
+        border: 2.5px solid rgb(203, 213, 225);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(51, 101, 138, 1);
+    }
+
+    .dark::-webkit-scrollbar-track {
+        background: rgb(51, 65, 85);
+    }
+
+    .dark::-webkit-scrollbar-thumb {
+        background: rgba(233, 196, 106, 0.6);
+        border: 2px solid rgb(51, 65, 85);
+    }
+
+    .dark::-webkit-scrollbar-thumb:hover {
+        background: rgba(233, 196, 106, 1);
+    }
+
 }
