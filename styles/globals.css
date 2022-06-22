@@ -5,69 +5,66 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        font-family: Montserrat
-    }
+  html {
+    font-family: Montserrat;
+  }
 
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
 
-    ::-webkit-scrollbar-track {
-        background: rgb(203, 213, 225);
-    }
+  ::-webkit-scrollbar-track {
+    background: rgb(203, 213, 225);
+  }
 
-    ::-webkit-scrollbar-thumb {
-        background: rgba(51, 101, 138, 0.6);
-        border-radius: 5px;
-        border: 2.5px solid rgb(203, 213, 225);
-    }
-    
-    .dark::-webkit-scrollbar-track {
-        background: rgb(51, 65, 85);
-        /* background: transparent; */
-    }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(51, 101, 138, 0.6);
+    border-radius: 5px;
+    border: 2.5px solid rgb(203, 213, 225);
+  }
 
-    .dark::-webkit-scrollbar-thumb {
-        background: rgba(233, 196, 106, 1);
-        border-radius: 5px;
-        border: 2px solid rgb(51, 65, 85);
-    }
+  .dark::-webkit-scrollbar-track {
+    background: rgb(51, 65, 85);
+    /* background: transparent; */
+  }
 
+  .dark::-webkit-scrollbar-thumb {
+    background: rgba(233, 196, 106, 1);
+    border-radius: 5px;
+    border: 2px solid rgb(51, 65, 85);
+  }
 }
 
 @layer components {
-
-    /* #navMenu.activate {
+  /* #navMenu.activate {
         @apply block scale-y-100 h-auto opacity-100
     } */
 
-    .shadow-9 {
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    }
+  .shadow-9 {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
 
-    .shadow-25 {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    }
+  .shadow-25 {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
 
-    .shadow-28 {
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    }
+  .shadow-28 {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
 
+  .nav-toggler.is-open span:nth-child(1) {
+    @apply top-4 rotate-[405deg];
+  }
 
-    .nav-toggler.is-open span:nth-child(1) {
-        @apply top-4 rotate-[405deg]
-    }
+  .nav-toggler.is-open span:nth-child(2) {
+    @apply scale-x-0;
+  }
 
-    .nav-toggler.is-open span:nth-child(2) {
-        @apply scale-x-0
-    }
+  .nav-toggler.is-open span:nth-child(3) {
+    @apply top-4 rotate-[-405deg];
+  }
 
-    .nav-toggler.is-open span:nth-child(3) {
-        @apply top-4 rotate-[-405deg]
-    }
-
-    .markdown h1 {
+  /* .markdown h1 {
         @apply text-3xl font-semibold
     }
 
@@ -95,6 +92,11 @@
         @apply my-4
     }
 
+    .markdown ul {
+        @apply list-disc list-inside
+    }
 
-
+    .markdown ol {
+        @apply list-decimal list-inside
+    } */
 }

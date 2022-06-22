@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     safelist: [
-        'dark'
+        'dark', 'focus', 'markdown'
     ],
     mode: 'jit',
     content: [
@@ -29,6 +29,7 @@ module.exports = {
         },
     },
     plugins: [
+        require('@tailwindcss/typography'),
     ],
     variants: {
     }

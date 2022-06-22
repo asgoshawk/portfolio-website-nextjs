@@ -1,4 +1,5 @@
 {
     "css.format.newlineBetweenRules": true,
-    "css.format.enable": false
+    "css.format.enable": false,
+    "prettier.printWidth": 120,
 }

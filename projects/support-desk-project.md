@@ -1,14 +1,17 @@
 ---
 title: 'Support Desk Project'
 excerpt: 'A full stack project with MERN framework including token authentication and Redux.'
-tags: ["React", "Redux", "Express", "MongoDB", "JavaScript"]
+tags: ['React', 'Redux', 'Express', 'MongoDB', 'JavaScript']
 cover_image: '/images/projects/support-desk-web.png'
 priority: 5
 ---
 
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
 
 paragraph
@@ -18,18 +21,26 @@ paragraph
 - ul List1
 - ul List2
 - ul List3
-    1. ol List1 
-    1. ol List2
-    1. ol List3 
+  1. ol List1
+  1. ol List2
+  1. ol List3
 
 `Code` in paragraph.
 
+```js
+let a = 123;
+console.log(a);
 ```
-Code block
+
+```Python
+a = 123
+a += 1
+print(a)
 ```
+
 **Bold**
 
-*Italic*
+_Italic_
 
 A Divider below
 

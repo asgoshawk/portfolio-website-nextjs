@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/prism-nord.css'
 import { useRouter } from "next/router"
 import { useEffect, useState } from 'react'
 import Layout from '../components/Layout'
