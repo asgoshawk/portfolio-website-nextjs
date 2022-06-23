@@ -29,7 +29,7 @@ const Profile = () => {
   const router = useRouter();
 
   useEffect(() => {
-    console.log(router.asPath.replace('/', ''));
+    // console.log(router.asPath.replace('/', ''));
     if (router.asPath.replace('/', '')) {
       let elem = document.getElementById(router.asPath.replace('/', ''));
       if (elem) {
@@ -125,22 +125,80 @@ const Banner = () => {
 
 const About = () => {
   const [trigger1, setTrigger1] = useState(false);
+
+  const getAge = () => {
+    const today = new Date();
+    const yearNow = today.getFullYear();
+    const birthDate = new Date(1994, 11, 12); // 11 for Dec.
+    const dumDate = birthDate;
+    dumDate.setFullYear(yearNow - 1);
+    const daysOfYear = (yearNow % 4 === 0 && yearNow % 100 !== 0) || yearNow % 400 === 0 ? 366 : 365;
+    const diffDays = (today - dumDate) / 86400000 / daysOfYear;
+    let ageYear = today.getFullYear() - 1994 - 1;
+    if (diffDays >= 1) {
+      ageYear += 1;
+    }
+    return { ageQ: ageYear, ageR: diffDays % 1 };
+  };
+
+  const { ageQ, ageR } = getAge();
+
   return (
     <div className='relative w-full my-8 px-4 md:px-0 md:w-5/6 lg:w-4/5 md:max-w-5xl'>
       <div id='about' className='absolute -top-16 left-0'></div>
-      <h1 className='text-4xl md:text-5xl font-thin text-slate-800 dark:text-gray-300 py-4'>ABOUT</h1>
+      <h1 className='text-4xl md:text-5xl font-thin text-slate-800 dark:text-gray-300 py-8'>ABOUT</h1>
 
-      <ScrollTrigger className='relative ' onEnter={() => setTrigger1(true)}>
-        <div className='relative w-32 h-32'>
-          <div
-            className='absolute h-auto w-auto inset-0 m-2 rounded-full flex items-center justify-center
-                                  bg-slate-200 dark:bg-slate-800 shadow-28 z-10'
-          >
-            <h1 className='text-slate-800 dark:text-gray-300'>123</h1>
+      <div className='flex flex-col md:flex-row items-center md:items-start px-4 sm:px-12 md:px-4'>
+        <div className='w-full md:w-1/3'>
+          <div className='rounded-2xl w-full max-w-sm mb-2 aspect-square mx-auto md:mx-0 shadow-2xl overflow-hidden'>
+            <img className='w-full' src='https://avatars.githubusercontent.com/u/42184309' alt='' />
           </div>
-          <CircleProgress dashOffset={80} strokeColor={'stroke-secondary dark:stroke-primary'} trigger={trigger1} />
+          <ScrollTrigger className='relative flex flex-col items-center' onEnter={() => setTrigger1(true)}>
+            <div className='w-full m-2'>
+              <p className='mb-2 text-xl md:text-md text-slate-800 dark:text-gray-300'>Lv. {ageQ}</p>
+              <Expbar width={ageR * 100} barColor={'bg-secondary dark:bg-primary'} isTrigger={trigger1} />
+            </div>
+            <div className='w-full flex items-center justify-between my-8 md:my-4'>
+              <AbilityItem text='STR' value={30} trigger={trigger1} />
+              <AbilityItem text='DEF' value={40} trigger={trigger1} />
+              <AbilityItem text='INT' value={80} trigger={trigger1} />
+              <AbilityItem text='DEX' value={60} trigger={trigger1} />
+              <AbilityItem text='LUK' value={50} trigger={trigger1} />
+            </div>
+          </ScrollTrigger>
         </div>
-      </ScrollTrigger>
+
+        <div className='w-full h-full md:grow-1 flex flex-col md:pl-12 md:mt-0 text-slate-800 dark:text-gray-300 justify-between'>
+            <div className='text-justify mb-6'>
+                Familiar with <strong>Python</strong> and <strong>JavaScript</strong>, and mainly deveolpe with <strong>React</strong> and <strong>Tailwind CSS</strong> recently.
+                Interested in learning new things and can quickly get the hang of them most of the time.
+                Good at developing IoT prototype using <strong>Raspberry Pi</strong> and <strong>Pico</strong>.
+            </div>
+            <div className='text-justify mb-6'>
+                During the Research and Development Subtstitute Services (RDSS) in National Taiwan University, 
+                I spent about <strong>1+ years</strong> self-studying and developing monitoring website for air quality box from
+                data logger to <strong>full stack</strong> application.
+                To improve the performance, InfluxDB and API were implemented to the last verion of application.
+            </div>
+            <div className='text-justify'>
+                A <strong>NERDY</strong> guy, but gentle and warmhearted. Have lots of hobbies such as plastic model and digital art. Usually enjoy 3A games and anime in my spare time. 
+            </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AbilityItem = ({ text, value, trigger }) => {
+  return (
+    <div className='relative aspect-square w-16 md:w-10 rounded-full shadow-lg'>
+      <div
+        className='absolute h-auto w-auto inset-0 m-1 rounded-full flex items-center justify-center
+                        bg-slate-200 dark:bg-slate-800 shadow-28 z-10 text-slate-800 dark:text-gray-300 text-sm md:text-xs'
+      >
+        {text}
+      </div>
+      <CircleProgress dashOffset={value} strokeColor={'stroke-secondary dark:stroke-primary'} trigger={trigger} />
     </div>
   );
 };
@@ -149,8 +207,6 @@ const Skills = () => {
   const [trigger, setTrigger] = useState(false);
   return (
     <div className='relative w-full my-8 px-4 md:px-0 md:w-5/6 lg:w-4/5 md:max-w-5xl'>
-      <div className='absolute -top-16 left-0'></div>
-
       <h1 className='text-4xl md:text-5xl font-thin text-slate-800 dark:text-gray-300 pb-2'>SKILLS</h1>
       <ScrollTrigger
         className='w-full my-2 lg:grid lg:grid-cols-2 lg:gap-2'
@@ -230,14 +286,14 @@ const Experience = () => {
           >
             <FaBlackTie className='text-[1.2rem] text-surface dark:text-background' />
           </span>
-          <h3 className=' flex items-center mb-1 text-3xl font-semibold text-slate-800 dark:text-gray-300'>
+          <h3 className=' flex items-center mb-1 text-3xl font-medium text-slate-800 dark:text-gray-300'>
             Research Assistant (RDSS)
           </h3>
-          <h3 className=' flex items-center mb-1 text-xl font-semibold text-secondary dark:text-primary'>
+          <h3 className=' flex items-center mb-1 text-xl font-medium text-secondary dark:text-primary'>
             National Taiwan University
           </h3>
           <time className='flex items-center mb-2 text-lg font-normal text-gray-400 dark:text-gray-500'>
-            Sep. 2020 - May 2022
+            Sep. 2020 - May 2022 at Taipei, Taiwan
           </time>
           <ul className='text-base font-normal text-gray-600 dark:text-gray-300 list-disc'>
             <p className='mb-1 font-semibold'>Instrument Development</p>
@@ -286,10 +342,10 @@ const Education = () => {
           >
             <FaGraduationCap className='text-[1.2rem] text-surface dark:text-background' />
           </span>
-          <h3 className=' flex items-center mb-1 text-3xl font-semibold text-slate-800 dark:text-gray-300'>
+          <h3 className=' flex items-center mb-1 text-3xl font-medium text-slate-800 dark:text-gray-300'>
             M.S. Atmospheric Sciences
           </h3>
-          <h3 className=' flex items-center mb-1 text-xl font-semibold text-secondary dark:text-primary'>
+          <h3 className=' flex items-center mb-1 text-xl font-medium text-secondary dark:text-primary'>
             National Taiwan University
           </h3>
           <time className='flex items-center mb-2 text-lg font-normal text-gray-400 dark:text-gray-500'>
@@ -307,10 +363,10 @@ const Education = () => {
           >
             <FaGraduationCap className='text-[1.2rem] text-surface dark:text-background' />
           </span>
-          <h3 className=' flex items-center mb-1 text-3xl font-semibold text-slate-800 dark:text-gray-300'>
+          <h3 className=' flex items-center mb-1 text-3xl font-medium text-slate-800 dark:text-gray-300'>
             B.S. Chemistry
           </h3>
-          <h3 className=' flex items-center mb-1 text-xl font-semibold text-secondary dark:text-primary'>
+          <h3 className=' flex items-center mb-1 text-xl font-medium text-secondary dark:text-primary'>
             National Taiwan University
           </h3>
           <time className='flex items-center mb-2 text-lg font-normal text-gray-400 dark:text-gray-500'>

@@ -9,6 +9,10 @@
     font-family: Montserrat;
   }
 
+  strong {
+    @apply text-secondary dark:text-primary;
+  }
+
   ::-webkit-scrollbar {
     width: 10px;
   }
