@@ -293,7 +293,7 @@ const Experience = () => {
             National Taiwan University
           </h3>
           <time className='flex items-center mb-2 text-lg font-normal text-gray-400 dark:text-gray-500'>
-            Sep. 2020 - May 2022 at Taipei, Taiwan
+            Sep. 2020 - May 2022
           </time>
           <ul className='text-base font-normal text-gray-600 dark:text-gray-300 list-disc'>
             <p className='mb-1 font-semibold'>Instrument Development</p>

@@ -27,14 +27,14 @@ const ProjectPage = ({ frontmatter: { cover_image, title, tags, excerpt }, slug,
         <div className='relative w-full my-8 px-4 md:px-0 md:w-5/6 lg:w-4/5 md:max-w-3xl'>
           <Link href='/projects'>
             <a
-              className=' text-secondary dark:text-primary text-md px-5 py-2 5 mt-16 rounded-lg border-secondary dark:border-primary border-2 hover:text-surface dark:hover:text-background
+              className='inline-block text-secondary dark:text-primary text-md px-5 py-2 5 mt-16 rounded-lg border-secondary dark:border-primary border-2 hover:text-surface dark:hover:text-background
              hover:bg-secondary dark:hover:bg-primary transition-all ease-in-out duration-800'
             >
               Go Back
             </a>
           </Link>
-          <img className='my-6 rounded-lg shadow-lg' src={cover_image} alt={slug + '-cover'} />
-          <h3 className='inline-block mb-2 text-3xl md:text-4xl font-thin text-slate-800 dark:text-gray-300'>
+          {/* <img className='my-6 rounded-lg shadow-lg' src={cover_image} alt={slug + '-cover'} /> */}
+          <h3 className='block mt-6 mb-2 text-3xl md:text-4xl font-thin text-slate-800 dark:text-gray-300'>
             {title}
           </h3>
           <div className='flex items-center flex-wrap mt-2 mb-8'>
