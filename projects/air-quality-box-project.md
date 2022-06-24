@@ -6,13 +6,13 @@ cover_image: '/images/projects/aqb-inner.jpg'
 priority: 0
 ---
 
-Live demo [here](https://earthcup.as.ntu.edu.tw/history)
-
 ### Intro
 
 This is a major project of ACLab which provides a low-cost, high time resolution, and protable air quality box (AQB) to monitor the weather elements, particulate matter (PM), CO2, CO, oxidizing gases and volatile organic compounds (VOCs).
 
-![](https://i.imgur.com/zn5PZPK.jpg)
+Live demo [here](https://earthcup.as.ntu.edu.tw/history).
+
+![Field Study](https://i.imgur.com/zn5PZPK.jpg)
 
 ---
 

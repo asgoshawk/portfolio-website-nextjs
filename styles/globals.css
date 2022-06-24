@@ -15,6 +15,7 @@
 
   ::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
   }
 
   ::-webkit-scrollbar-track {
@@ -66,6 +67,16 @@
 
   .nav-toggler.is-open span:nth-child(3) {
     @apply top-4 rotate-[-405deg];
+  }
+
+  .dark pre::-webkit-scrollbar-track {
+    background: rgb(51, 65, 85);
+  }
+
+  .dark pre::-webkit-scrollbar-thumb {
+    background: rgba(233, 196, 106, 1);
+    border-radius: 5px;
+    border: 2px solid rgb(51, 65, 85);
   }
 
   /* .markdown h1 {

@@ -14,8 +14,19 @@ require('prismjs/components/prism-bash')
 require('prismjs/components/prism-python')
 
 const ProjectPage = ({ frontmatter: { cover_image, title, tags, excerpt }, slug, content }) => {
+
+    const modifyLink = () => {
+        const markdownDiv = document.getElementById('markdown')
+        const links = markdownDiv.querySelectorAll('a')
+        links.forEach((item) => {
+            item.setAttribute('target', '_blank')
+            item.setAttribute('rel', 'noopener noreferrer')
+        })
+    }
+
     useEffect(() => {
         Prism.highlightAll()
+        modifyLink()
     }, [])
 
   return (
@@ -27,7 +38,7 @@ const ProjectPage = ({ frontmatter: { cover_image, title, tags, excerpt }, slug,
         <div className='relative w-full my-8 px-4 md:px-0 md:w-5/6 lg:w-4/5 md:max-w-3xl'>
           <Link href='/projects'>
             <a
-              className='inline-block text-secondary dark:text-primary text-md px-5 py-2 5 mt-16 rounded-lg border-secondary dark:border-primary border-2 hover:text-surface dark:hover:text-background
+              className='inline-block text-secondary dark:text-primary text-md px-5 py-2 5 mt-4 rounded-lg border-secondary dark:border-primary border-2 hover:text-surface dark:hover:text-background
              hover:bg-secondary dark:hover:bg-primary transition-all ease-in-out duration-800'
             >
               Go Back
@@ -49,7 +60,7 @@ const ProjectPage = ({ frontmatter: { cover_image, title, tags, excerpt }, slug,
             ))}
           </div>
 
-            <article className='w-full prose dark:prose-invert text-slate-800 dark:text-gray-300 font-montserrat'>
+            <article id="markdown" className='w-full prose dark:prose-invert text-slate-800 dark:text-gray-300 font-montserrat'>
                 <MDXRemote {...content} />
             </article>
         </div>

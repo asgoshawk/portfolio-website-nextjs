@@ -6,46 +6,66 @@ cover_image: '/images/projects/support-desk-web.png'
 priority: 5
 ---
 
-# H1
+### Intro
 
-## H2
+This is a hand-on project of Udemy course ["React Front To Back 2022"](https://www.udemy.com/course/react-front-to-back-2022/) by Brad Traversy.
 
-### H3
+Live demo [here](https://asgoshawksupportdesk.herokuapp.com/) (Takes some time to wake up the Heroku app).
 
-#### H4
-
-paragraph
-
-> This is a quote
-
-- ul List1
-- ul List2
-- ul List3
-  1. ol List1
-  1. ol List2
-  1. ol List3
-
-`Code` in paragraph.
-
-```js
-let a = 123;
-console.log(a);
-```
-
-```Python
-a = 123
-a += 1
-print(a)
-```
-
-**Bold**
-
-_Italic_
-
-A Divider below
+Github repo [here](https://github.com/asgoshawk/RFTB-support-desk).
 
 ---
 
-[Google](https://www.google.com)
+### Demo
 
-![](https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80)
+---
+
+### Features & Technologies
+
+- React
+- Redux
+- Express / Node.js
+- MongoDB
+- RESTful API
+- Authentication with Json Web Token (JWT)
+- Protected routes
+
+---
+
+### Getting started
+
+Clone the repository and install the dependencies:
+
+```bash
+$ git clone https://github.com/asgoshawk/RFTB-support-desk.git
+$ cd RFTB-support-desk
+$ npm install
+
+# Don't forget the modules in the frontend directory
+$ cd frontend
+$ npm install
+
+# Back to the root directory
+$ cd ..
+```
+
+Add a `.env` file in the root directory for enviromental variables:
+
+```bash
+$ touch .env
+```
+
+In the `.env`, three variables must be defined:
+
+```
+NODE_ENV=development
+MONGO_URI=<Your MongoDB URI>
+JWT_SECRET=<Your JWT SECRET>
+```
+
+And then start the app by running command:
+
+```bash
+# Use concurrently to run both frontend and backend
+$ npm run dev
+```

@@ -170,18 +170,19 @@ const About = () => {
 
         <div className='w-full h-full md:grow-1 flex flex-col md:pl-12 md:mt-0 text-slate-800 dark:text-gray-300 justify-between'>
             <div className='text-justify mb-6'>
-                Familiar with <strong>Python</strong> and <strong>JavaScript</strong>, and mainly deveolpe with <strong>React</strong> and <strong>Tailwind CSS</strong> recently.
+                Familiar with <strong>Python</strong> and <strong>JavaScript</strong>, and mainly deveolpes with <strong>React</strong> and <strong>Tailwind CSS</strong> recently.
                 Interested in learning new things and can quickly get the hang of them most of the time.
                 Good at developing IoT prototype using <strong>Raspberry Pi</strong> and <strong>Pico</strong>.
             </div>
             <div className='text-justify mb-6'>
                 During the Research and Development Subtstitute Services (RDSS) in National Taiwan University, 
-                I spent about <strong>1+ years</strong> self-studying and developing monitoring website for air quality box from
+                spending about <strong>1+ years</strong> self-studying and developing monitoring website for air quality box from
                 data logger to <strong>full stack</strong> application.
                 To improve the performance, InfluxDB and API were implemented to the last verion of application.
             </div>
             <div className='text-justify'>
-                A <strong>NERDY</strong> guy, but gentle and warmhearted. Have lots of hobbies such as plastic model and digital art. Usually enjoy 3A games and anime in my spare time. 
+                A nerdy guy, but gentle, warmhearted, and patient in teaching people technologies.
+                Having lots of hobbies such as plastic model and digital art; usually enjoying 3A games and anime in the spare time. 
             </div>
         </div>
       </div>
