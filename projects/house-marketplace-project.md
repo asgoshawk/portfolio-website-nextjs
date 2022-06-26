@@ -10,13 +10,15 @@ priority: 4
 
 This is a hand-on project of Udemy course ["React Front To Back 2022"](https://www.udemy.com/course/react-front-to-back-2022/) by Brad Traversy. In this project, **Firebase** was introduced for user data and authentication.
 
-Live demo [here](https://house-marketplace-asgoshawk.vercel.app/).
-
 Github repo [here](https://github.com/asgoshawk/RFTB-marketplace-project).
 
 ---
 
 ### Demo
+
+![Demo gif](https://i.imgur.com/RoUFnne.gif)
+
+The live demo is also available [here](https://house-marketplace-asgoshawk.vercel.app/).
 
 ---
 

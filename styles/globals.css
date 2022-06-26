@@ -7,6 +7,7 @@
 @layer base {
   html {
     font-family: Montserrat;
+    scroll-behavior: smooth;
   }
 
   strong {
@@ -83,40 +84,4 @@
   code::after {
     display: none;
   }
-
-  /* .markdown h1 {
-        @apply text-3xl font-semibold
-    }
-
-    .markdown h2 {
-        @apply text-2xl font-semibold
-    }
-
-    .markdown h3 {
-        @apply text-xl
-    }
-
-    .markdown h4 {
-        @apply text-lg
-    }
-
-    .markdown p {
-        @apply text-base text-justify
-    }
-
-    .markdown a {
-        @apply underline text-secondary dark:text-primary
-    }
-
-    .markdown img {
-        @apply my-4
-    }
-
-    .markdown ul {
-        @apply list-disc list-inside
-    }
-
-    .markdown ol {
-        @apply list-decimal list-inside
-    } */
 }

@@ -10,13 +10,15 @@ priority: 5
 
 This is a hand-on project of Udemy course ["React Front To Back 2022"](https://www.udemy.com/course/react-front-to-back-2022/) by Brad Traversy. This is the first full stack project using **MERN** framework. **Redux** is also implemented for client data storage. To build protected API routes, **JWT** was used to create authenication.
 
-Live demo [here](https://asgoshawksupportdesk.herokuapp.com/) (Takes some time to wake up the Heroku app).
-
 Github repo [here](https://github.com/asgoshawk/RFTB-support-desk).
 
 ---
 
 ### Demo
+
+![](https://i.imgur.com/doRrjUl.gif)
+
+The live demo is also available [here](https://asgoshawksupportdesk.herokuapp.com/) (It might take some time to wake up the Heroku app).
 
 ---
 

@@ -45,7 +45,7 @@ const ProjectPage = ({ frontmatter: { cover_image, title, tags, excerpt }, slug,
             </a>
           </Link>
           {/* <img className='my-6 rounded-lg shadow-lg' src={cover_image} alt={slug + '-cover'} /> */}
-          <h3 className='block mt-6 mb-2 text-3xl md:text-4xl font-thin text-slate-800 dark:text-gray-300'>
+          <h3 className='block mt-6 mb-4 text-4xl md:text-5xl font-thin text-slate-800 dark:text-gray-300'>
             {title}
           </h3>
           <div className='flex items-center flex-wrap mt-2 mb-8'>

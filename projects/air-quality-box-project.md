@@ -10,9 +10,15 @@ priority: 0
 
 This is a major project of ACLab which provides a low-cost, high time resolution, and protable air quality box (AQB) to monitor the weather elements, particulate matter (PM), CO2, CO, oxidizing gases and volatile organic compounds (VOCs).
 
-Live demo [here](https://earthcup.as.ntu.edu.tw/history).
-
 ![Field Study](https://i.imgur.com/zn5PZPK.jpg)
+
+---
+
+### Demo
+
+![Demo](https://i.imgur.com/aJTpvnG.gif)
+
+The live demo is also available [here](https://earthcup.as.ntu.edu.tw/history). However, it might have no data to display due to no device online.
 
 ---
 

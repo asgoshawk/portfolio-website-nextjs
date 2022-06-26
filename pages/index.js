@@ -144,7 +144,7 @@ const About = () => {
   const { ageQ, ageR } = getAge();
 
   return (
-    <div className='relative w-full my-8 px-4 md:px-0 md:w-5/6 lg:w-4/5 md:max-w-5xl'>
+    <div className='relative w-full mb-8 mt-16 px-4 md:px-0 md:w-5/6 lg:w-4/5 md:max-w-5xl'>
       <div id='about' className='absolute -top-16 left-0'></div>
       <h1 className='text-4xl md:text-5xl font-thin text-slate-800 dark:text-gray-300 py-8'>ABOUT</h1>
 

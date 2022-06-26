@@ -10,13 +10,15 @@ priority: 3
 
 This is a hand-on project of Udemy course ["React Front To Back 2022"](https://www.udemy.com/course/react-front-to-back-2022/) by Brad Traversy. This React app displays the github user's profile using Github API. Also, it is the first time using the **useContext** and **useReducer** to store the user data in the client.
 
-Live demo [here](https://asgoshawk-github-finder.netlify.app/).
-
 Github repo [here](https://github.com/asgoshawk/RFTB-github-finder).
 
 ---
 
 ### Demo
+
+![](https://i.imgur.com/QRRhXcG.gif)
+
+The live demo is also available [here](https://asgoshawk-github-finder.netlify.app/).
 
 ---
 
