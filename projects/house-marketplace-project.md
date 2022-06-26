@@ -8,7 +8,7 @@ priority: 4
 
 ### Intro
 
-This is a hand-on project of Udemy course ["React Front To Back 2022"](https://www.udemy.com/course/react-front-to-back-2022/) by Brad Traversy. In this project, Firebase was introduced for user data and authentication.
+This is a hand-on project of Udemy course ["React Front To Back 2022"](https://www.udemy.com/course/react-front-to-back-2022/) by Brad Traversy. In this project, **Firebase** was introduced for user data and authentication.
 
 Live demo [here](https://house-marketplace-asgoshawk.vercel.app/).
 
@@ -64,10 +64,10 @@ service cloud.firestore {
   match /databases/{database}/documents {
     // Listings
     match /listings/{listing} {
-    	allow read;
-      allow create: if request.auth != null && request.resource.data.imageUrls.size() < 7;
-      allow update: if resource.data.userRef == request.auth.uid;
-    	allow delete: if resource.data.userRef == request.auth.uid;
+        allow read;
+        allow create: if request.auth != null && request.resource.data.imageUrls.size() < 7;
+        allow update: if resource.data.userRef == request.auth.uid;
+        allow delete: if resource.data.userRef == request.auth.uid;
     }
 
     // Users

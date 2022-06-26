@@ -79,6 +79,11 @@
     border: 2px solid rgb(51, 65, 85);
   }
 
+  code::before,
+  code::after {
+    display: none;
+  }
+
   /* .markdown h1 {
         @apply text-3xl font-semibold
     }
