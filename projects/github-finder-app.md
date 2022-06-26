@@ -16,7 +16,7 @@ Github repo [here](https://github.com/asgoshawk/RFTB-github-finder).
 
 ### Demo
 
-![](https://i.imgur.com/QRRhXcG.gif)
+![Demo](https://i.imgur.com/QRRhXcG.gif)
 
 The live demo is also available [here](https://asgoshawk-github-finder.netlify.app/).
 

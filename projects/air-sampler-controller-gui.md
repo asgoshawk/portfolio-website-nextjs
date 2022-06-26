@@ -10,7 +10,7 @@ priority: 2
 
 This is a project for air sampling in ACLab. This work includs the prototype device based on Raspberry Pi Zero W and its contorl script written in **Python**. For more infomation, please visit the link above.
 
-## Github repo [here](https://github.com/asgoshawk/air-sampler-controller).
+Github repo [here](https://github.com/asgoshawk/air-sampler-controller).
 
 ### Device
 

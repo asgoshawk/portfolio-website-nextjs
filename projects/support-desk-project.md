@@ -16,7 +16,7 @@ Github repo [here](https://github.com/asgoshawk/RFTB-support-desk).
 
 ### Demo
 
-![](https://i.imgur.com/doRrjUl.gif)
+![Demo](https://i.imgur.com/doRrjUl.gif)
 
 The live demo is also available [here](https://asgoshawksupportdesk.herokuapp.com/) (It might take some time to wake up the Heroku app).
 
