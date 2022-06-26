@@ -27,21 +27,20 @@ import { useState, useEffect } from "react";
 // };
 
 export const useDarkMode = () => {
-    // const [enabled, setEnabled] = useLocalStorage('dark-theme');
     const [enabled, setEnabled] = useState(
-        typeof window !== "undefined" ? localStorage.getItem('data-theme') : "dark"
+        typeof window !== "undefined" ? localStorage.getItem('data-theme') !== 'light' : true 
     );
 
-    const isEnabled = typeof enabledState === 'undefined' && enabled;
+    // const isEnabled = typeof enabledState === 'undefined' && enabled;
 
     useEffect(() => {
         const className = 'dark';
         const bodyClass = window.document.body.classList;
-        isEnabled ? bodyClass.add(className) : bodyClass.remove(className);
+        enabled ? bodyClass.add(className) : bodyClass.remove(className);
         if (typeof window !== "undefined") {
-            localStorage.setItem('data-theme', enabled)
+            localStorage.setItem('data-theme', enabled? 'dark':'light')
         }
-    }, [enabled, isEnabled]);
+    }, [enabled]);
 
     return [enabled, setEnabled]
 }

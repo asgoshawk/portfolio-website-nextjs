@@ -16,7 +16,7 @@ Github repo [here](https://github.com/asgoshawk/RFTB-marketplace-project).
 
 ### Demo
 
-![Demo gif](https://i.imgur.com/RoUFnne.gif)
+![Demo](https://i.imgur.com/U2xBXqx.gif)
 
 The live demo is also available [here](https://house-marketplace-asgoshawk.vercel.app/).
 
