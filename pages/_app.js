@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import '../styles/prism-nord.css';
 import Head from 'next/head';
+import Script from 'next/script';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import * as ga from '../lib/google-analytics';
@@ -36,25 +37,19 @@ const MyApp = ({ Component, pageProps }) => {
         <title>AsGoshawk</title>
         <meta name='description' content='Asgoshaw Portfolio' />
         <link rel='icon' href='/favicon.ico' />
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-          strategy='afterInteractive'
-        />
-        <script 
-        id='google-analytics' 
-        strategy='afterInteractive'
-        dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
-                `
-        }}
-        />
       </Head>
+      <Script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        strategy='afterInteractive'
+      />
+      <Script id='google-analytics' strategy='afterInteractive'>{`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              
+              gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+              `}</Script>
       <Layout>
         {pageLoading ? (
           <div className='min-h-screen flex items-center justify-center'>
