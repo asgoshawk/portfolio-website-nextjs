@@ -64,19 +64,19 @@ const Banner = () => {
       className='relative w-full h-screen pt-16 lg:pl-40 flex flex-col items-center justify-center bg-scroll bg-bottom bg-cover bg-no-repeat'
       style={{ backgroundImage: `url(${BackgroundImg.src})` }}
     >
-      <div className='w-full md:w-5/6 lg:w-4/5 md:max-w-3xl h-60 relative py-2 mx-4 mt-32 md:mx-0 md:mt-0 bg-slate-700/40 rounded-none md:rounded-full flex flex-col md:items-end justify-evenly'>
+      <div className='w-full md:w-5/6 lg:w-4/5 md:max-w-3xl h-48 sm:h-60 relative py-4 sm:py-2 mx-4 mt-32 md:mx-0 md:mt-0 bg-slate-700/40 rounded-none md:rounded-full flex flex-col md:items-end justify-evenly'>
         <div
           className='absolute rounded-full w-60 h-60 lg:w-80 lg:h-80 -top-56 inset-x-0 mx-auto  
                             md:left-0 md:top-auto md:mx-0 lg:-left-40 shadow-2xl overflow-hidden'
         >
           <img src='https://avatars.githubusercontent.com/u/42184309' alt='' />
         </div>
-        <p className='text-xl lg:text-2xl text-gray-300 mx-auto md:ml-28 md:mr-28 lg:ml-48'>Hi there! I am</p>
-        <h1 className='text-4xl lg:text-5xl font-bold text-primary mx-auto md:ml-28 md:mr-28 lg:ml-48'>
+        <p className='text-lg sm:text-xl lg:text-2xl text-gray-300 mx-auto md:ml-28 md:mr-28 lg:ml-48'>Hi there! I am</p>
+        <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mx-auto md:ml-28 md:mr-28 lg:ml-48'>
           Ching-Wei Chu
         </h1>
-        <p className='text-xl lg:text-2xl text-gray-300 mx-auto md:ml-28 md:mr-28 lg:ml-48'>
-          A Web developer from Taiwan.
+        <p className='text-lg sm:text-xl lg:text-2xl text-gray-300 mx-auto md:ml-28 md:mr-28 lg:ml-48'>
+          A web developer from Taiwan.
         </p>
         <ul className='flex flex-wrap items-center text-sm text-gray-300 mx-auto md:ml-28 md:mr-28 lg:ml-48'>
           <li className='mr-4 md:mr-6 py-[auto]'>
@@ -113,7 +113,7 @@ const Banner = () => {
       </div>
       <Link href='#about'>
         <a
-          className='relative text-primary text-lg px-5 py-2 5 mt-16 rounded-lg border-primary border-2
+          className='relative text-primary text-lg px-5 py-2 mt-6 sm:mt-16 rounded-lg border-primary border-2
                     hover:text-slate-900 hover:bg-primary/60 top-0 hover:top-0.5 transition-all ease-in-out duration-800'
         >
           About Me
@@ -148,7 +148,7 @@ const About = () => {
       <div id='about' className='absolute -top-16 left-0'></div>
       <h1 className='text-4xl md:text-5xl font-thin text-slate-800 dark:text-gray-300 py-8'>ABOUT</h1>
 
-      <div className='flex flex-col md:flex-row items-center md:items-start px-4 sm:px-12 md:px-4'>
+      <div className='flex flex-col md:flex-row items-center md:items-start px-0 sm:px-12 md:px-4'>
         <div className='w-full md:w-1/3'>
           <div className='rounded-2xl w-full max-w-sm mb-2 aspect-square mx-auto md:mx-0 shadow-2xl overflow-hidden'>
             <img className='w-full' src='https://avatars.githubusercontent.com/u/42184309' alt='' />
@@ -168,19 +168,19 @@ const About = () => {
           </ScrollTrigger>
         </div>
 
-        <div className='w-full h-full md:grow-1 flex flex-col md:pl-12 md:mt-0 text-slate-800 dark:text-gray-300 justify-between'>
-            <div className='text-justify mb-6'>
+        <div className='w-full h-fullsm:text-base md:grow-1 flex flex-col md:pl-12 md:mt-0 text-slate-800 dark:text-gray-300 justify-between'>
+            <div className='text-left sm:text-justify mb-6'>
                 Familiar with <strong>Python</strong> and <strong>JavaScript</strong>, and mainly deveolping with <strong>React</strong> and <strong>Tailwind CSS</strong> recently.
                 Interested in learning new things and can quickly get the hang of them most of the time.
                 Good at developing IoT prototype using <strong>Raspberry Pi</strong> and <strong>Pico</strong>.
                 Currently learning <strong>Next.js</strong> and the <strong>MERN</strong> framework.
             </div>
-            <div className='text-justify mb-6'>
+            <div className='text-left sm:text-justify mb-6'>
                 During the Research and Development Subtstitute Services (RDSS) in National Taiwan University, 
                 spent about <strong>1+ years</strong> self-studying and developed monitoring website for air quality box from
                 data logger to <strong>full stack</strong> application including <strong>database</strong> and <strong>API</strong> builds.
             </div>
-            <div className='text-justify'>
+            <div className='text-left sm:text-justify'>
                 A nerdy guy, but open-mined, creative, and patient in teaching people technologies.
                 Having lots of hobbies such as plastic model and digital art; usually enjoying side projects, 3A games, and anime in the spare time. 
             </div>
@@ -192,7 +192,7 @@ const About = () => {
 
 const AbilityItem = ({ text, value, trigger }) => {
   return (
-    <div className='relative aspect-square w-16 md:w-10 rounded-full shadow-lg'>
+    <div className='relative aspect-square w-12 sm:w-16 md:w-10 rounded-full shadow-lg'>
       <div
         className='absolute h-auto w-auto inset-0 m-1 rounded-full flex items-center justify-center
                         bg-slate-200 dark:bg-slate-800 shadow-28 z-10 text-slate-800 dark:text-gray-300 text-sm md:text-xs'
@@ -215,7 +215,7 @@ const Skills = () => {
         // onExit={() => setTrigger(false)}
       >
         <div
-          className='relative w-full px-4 py-4 rounded-2xl top-0 left-0
+          className='relative w-full px-0 sm:px-4 py-4 rounded-2xl top-0 left-0
                      hover:shadow-lg hover:top-0.5 hover:left-0.5 transition-all ease-in-out duration-800'
         >
           <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>Web Development</h1>
@@ -228,7 +228,7 @@ const Skills = () => {
         </div>
 
         <div
-          className='relative w-full px-4 py-4 rounded-2xl top-0 left-0
+          className='relative w-full px-0 sm:px-4 py-4 rounded-2xl top-0 left-0
                                 hover:shadow-lg hover:top-0.5 hover:left-0.5 transition-all ease-in-out duration-800'
         >
           <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>Programing Language</h1>
@@ -239,7 +239,7 @@ const Skills = () => {
         </div>
 
         <div
-          className='relative w-full px-4 py-4 rounded-2xl top-0 left-0
+          className='relative w-full px-0 sm:px-4 py-4 rounded-2xl top-0 left-0
                                 hover:shadow-lg hover:top-0.5 hover:left-0.5 transition-all ease-in-out duration-800'
         >
           <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>System & Software</h1>
@@ -249,7 +249,7 @@ const Skills = () => {
         </div>
 
         <div
-          className='relative w-full px-4 py-4 rounded-2xl top-0 left-0
+          className='relative w-full px-0 sm:px-4 py-4 rounded-2xl top-0 left-0
                                 hover:shadow-lg hover:top-0.5 hover:left-0.5 transition-all ease-in-out duration-800'
         >
           <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>Other</h1>
@@ -265,7 +265,7 @@ const Skills = () => {
 
 const SkillItem = ({ text, icon, percent, trigger }) => {
   return (
-    <div className='mx-auto w-5/6 my-4 flex items-center wrap justify-center'>
+    <div className='mx-auto w-11/12 sm:w-5/6 my-4 flex items-center wrap justify-center'>
       <div className='text-2xl text-slate-800 dark:text-gray-300 mr-8'>{icon}</div>
       <div className='w-5/6'>
         <p className='mb-1  text-md text-slate-800 dark:text-gray-300'> {text}</p>
@@ -279,18 +279,18 @@ const Experience = () => {
   return (
     <div className='w-full my-8 px-4 md:px-0 md:w-5/6 lg:w-4/5 md:max-w-5xl'>
       <h1 className='text-4xl md:text-5xl font-thin text-slate-800 dark:text-gray-300 py-4'>EXPERIENCE</h1>
-      <ul className='relative ml-auto w-11/12 my-4 border-l-2 border-gray-400 dark:border-gray-500'>
-        <li className='mb-10 ml-10 '>
+      <ul className='relative ml-4 sm:ml-auto w-11/12 my-4 border-l-2 border-gray-400 dark:border-gray-500'>
+        <li className='mb-10 ml-6 sm:ml-10 '>
           <span
             className='absolute w-8 h-8 flex items-center justify-center rounded-full -left-4 ring-8 
                                    ring-slate-200 dark:ring-slate-800 bg-secondary dark:bg-primary'
           >
             <FaBlackTie className='text-[1.2rem] text-surface dark:text-background' />
           </span>
-          <h3 className=' flex items-center mb-1 text-3xl font-medium text-slate-800 dark:text-gray-300'>
+          <h3 className=' flex items-center mb-1 text-xl sm:text-3xl font-medium text-slate-800 dark:text-gray-300'>
             Research Assistant (RDSS)
           </h3>
-          <h3 className=' flex items-center mb-1 text-xl font-medium text-secondary dark:text-primary'>
+          <h3 className=' flex items-center mb-1 text-lg sm:text-xl font-medium text-secondary dark:text-primary'>
             National Taiwan University
           </h3>
           <time className='flex items-center mb-2 text-lg font-normal text-gray-400 dark:text-gray-500'>
@@ -335,18 +335,18 @@ const Education = () => {
   return (
     <div className='w-full my-8 px-4 md:px-0 md:w-5/6 lg:w-4/5 md:max-w-5xl'>
       <h1 className='text-4xl md:text-5xl font-thin text-slate-800 dark:text-gray-300 py-4'>EDUCATION</h1>
-      <ul className='relative ml-auto w-11/12 my-4 border-l-2 border-gray-400 dark:border-gray-500'>
-        <li className='mb-10 ml-10 '>
+      <ul className='relative ml-4 sm:ml-auto w-11/12 my-4 border-l-2 border-gray-400 dark:border-gray-500'>
+        <li className='mb-10 ml-6 sm:ml-10 '>
           <span
             className='absolute w-8 h-8 flex items-center justify-center rounded-full -left-4 ring-8 
                                    ring-slate-200 dark:ring-slate-800 bg-secondary dark:bg-primary'
           >
             <FaGraduationCap className='text-[1.2rem] text-surface dark:text-background' />
           </span>
-          <h3 className=' flex items-center mb-1 text-3xl font-medium text-slate-800 dark:text-gray-300'>
+          <h3 className=' flex items-center mb-1 text-xl sm:text-3xl font-medium text-slate-800 dark:text-gray-300'>
             M.S. Atmospheric Sciences
           </h3>
-          <h3 className=' flex items-center mb-1 text-xl font-medium text-secondary dark:text-primary'>
+          <h3 className=' flex items-center mb-1 text-lg sm:text-xl font-medium text-secondary dark:text-primary'>
             National Taiwan University
           </h3>
           <time className='flex items-center mb-2 text-lg font-normal text-gray-400 dark:text-gray-500'>
@@ -357,17 +357,17 @@ const Education = () => {
             <li className='ml-4 mb-2'>Researched in the new particle formation from monoterpene ozonolysis.</li>
           </ul>
         </li>
-        <li className='mb-10 ml-10 '>
+        <li className='mb-10 ml-6 sm:ml-10 '>
           <span
             className='absolute w-8 h-8 flex items-center justify-center rounded-full -left-4 ring-8 
                                    ring-slate-200 dark:ring-slate-800 bg-secondary dark:bg-primary    '
           >
             <FaGraduationCap className='text-[1.2rem] text-surface dark:text-background' />
           </span>
-          <h3 className=' flex items-center mb-1 text-3xl font-medium text-slate-800 dark:text-gray-300'>
+          <h3 className=' flex items-center mb-1 text-xl sm:text-3xl font-medium text-slate-800 dark:text-gray-300'>
             B.S. Chemistry
           </h3>
-          <h3 className=' flex items-center mb-1 text-xl font-medium text-secondary dark:text-primary'>
+          <h3 className=' flex items-center mb-1 text-lg sm:text-xl font-medium text-secondary dark:text-primary'>
             National Taiwan University
           </h3>
           <time className='flex items-center mb-2 text-lg font-normal text-gray-400 dark:text-gray-500'>
