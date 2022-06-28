@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import ScrollTrigger from 'react-scroll-trigger';
-import { FaLinkedin, FaGithub, FaCopyright, FaBlackTie, FaGraduationCap, FaLink, FaSearch } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaCopyright, FaBlackTie, FaGraduationCap, FaSearch } from 'react-icons/fa';
 import {
   SiReact,
   SiTailwindcss,
@@ -72,7 +72,9 @@ const Banner = () => {
         >
           <img src='https://avatars.githubusercontent.com/u/42184309' alt='' />
         </div>
-        <p className='text-lg sm:text-xl lg:text-2xl text-gray-300 mx-auto md:ml-28 md:mr-28 lg:ml-48'>Hi there! I am</p>
+        <p className='text-lg sm:text-xl lg:text-2xl text-gray-300 mx-auto md:ml-28 md:mr-28 lg:ml-48'>
+          Hi there! I am
+        </p>
         <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mx-auto md:ml-28 md:mr-28 lg:ml-48'>
           Ching-Wei Chu
         </h1>
@@ -170,21 +172,24 @@ const About = () => {
         </div>
 
         <div className='w-full h-fullsm:text-base md:grow-1 flex flex-col md:pl-12 md:mt-0 text-slate-800 dark:text-gray-300 justify-between'>
-            <div className='text-left sm:text-justify mb-6'>
-                Familiar with <strong>Python</strong> and <strong>JavaScript</strong>, and mainly deveolping with <strong>React</strong> and <strong>Tailwind CSS</strong> recently.
-                Interested in learning new things and can quickly get the hang of them most of the time.
-                Good at developing IoT prototype using <strong>Raspberry Pi</strong> and <strong>Pico</strong>.
-                Currently learning <strong>Next.js</strong> and the <strong>MERN</strong> framework.
-            </div>
-            <div className='text-left sm:text-justify mb-6'>
-                During the Research and Development Subtstitute Services (RDSS) in National Taiwan University, 
-                spent about <strong>1+ years</strong> self-studying and developed monitoring website for air quality box from
-                data logger to <strong>full stack</strong> application including <strong>database</strong> and <strong>API</strong> builds.
-            </div>
-            <div className='text-left sm:text-justify'>
-                A nerdy guy, but open-minded, creative, and patient in teaching people technologies.
-                Having lots of hobbies such as plastic model and digital art; usually enjoying side projects, 3A games, and anime in the spare time. 
-            </div>
+          <div className='text-left sm:text-justify mb-6'>
+            Familiar with <strong>Python</strong> and <strong>JavaScript</strong>, and mainly deveolping with{' '}
+            <strong>React</strong> and <strong>Tailwind CSS</strong> recently. Interested in learning new things and can
+            quickly get the hang of them most of the time. Good at developing IoT prototype using{' '}
+            <strong>Raspberry Pi</strong> and <strong>Pico</strong>. Currently learning <strong>Next.js</strong> and the{' '}
+            <strong>MERN</strong> framework.
+          </div>
+          <div className='text-left sm:text-justify mb-6'>
+            During the Research and Development Subtstitute Services (RDSS) in National Taiwan University, spent about{' '}
+            <strong>1+ years</strong> self-studying and developed monitoring website for air quality box from data
+            logger to <strong>full stack</strong> application including <strong>database</strong> and{' '}
+            <strong>API</strong> builds.
+          </div>
+          <div className='text-left sm:text-justify'>
+            A nerdy guy, but open-minded, creative, and patient in teaching people technologies. Having lots of hobbies
+            such as plastic model and digital art; usually enjoying side projects, 3A games, and anime in the spare
+            time.
+          </div>
         </div>
       </div>
     </div>
@@ -220,11 +225,39 @@ const Skills = () => {
                      hover:shadow-lg hover:top-0 hover:left-0 transition-all ease-in-out duration-800'
         >
           <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>Web Development</h1>
-          <SkillItem text={'React'} percent={60} trigger={trigger} icon={<SiReact />} showLink={true} tag='React'/>
-          <SkillItem text={'Tailwind CSS'} percent={55} trigger={trigger} icon={<SiTailwindcss />} showLink={true} tag='Tailwindcss'/>
-          <SkillItem text={'Express / Node.js'} percent={50} trigger={trigger} icon={<SiExpress />} showLink={true} tag='Express'/>
-          <SkillItem text={"InfluxDB"} percent={50} trigger={trigger} icon={<SiInfluxdb/>} showLink={true} tag='InfluxDB'/>
-          <SkillItem text={'MongoDB'} percent={45} trigger={trigger} icon={<SiMongodb />} showLink={true} tag='MongoDB'/>
+          <SkillItem text={'React'} percent={60} trigger={trigger} icon={<SiReact />} showLink={true} tag='React' />
+          <SkillItem
+            text={'Tailwind CSS'}
+            percent={55}
+            trigger={trigger}
+            icon={<SiTailwindcss />}
+            showLink={true}
+            tag='Tailwindcss'
+          />
+          <SkillItem
+            text={'Express / Node.js'}
+            percent={50}
+            trigger={trigger}
+            icon={<SiExpress />}
+            showLink={true}
+            tag='Express'
+          />
+          <SkillItem
+            text={'InfluxDB'}
+            percent={50}
+            trigger={trigger}
+            icon={<SiInfluxdb />}
+            showLink={true}
+            tag='InfluxDB'
+          />
+          <SkillItem
+            text={'MongoDB'}
+            percent={45}
+            trigger={trigger}
+            icon={<SiMongodb />}
+            showLink={true}
+            tag='MongoDB'
+          />
           {/* <SkillItem text={'Firebase'} percent={40} trigger={trigger} icon={<SiFirebase />} /> */}
         </div>
 
@@ -233,8 +266,15 @@ const Skills = () => {
                                 hover:shadow-lg hover:top-0 hover:left-0 transition-all ease-in-out duration-800'
         >
           <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>Programing Language</h1>
-          <SkillItem text={'Python'} percent={65} trigger={trigger} icon={<SiPython />} showLink={true} tag='Python'/>
-          <SkillItem text={'JavaScript'} percent={60} trigger={trigger} icon={<SiJavascript />} showLink={true} tag='JavaScript'/>
+          <SkillItem text={'Python'} percent={65} trigger={trigger} icon={<SiPython />} showLink={true} tag='Python' />
+          <SkillItem
+            text={'JavaScript'}
+            percent={60}
+            trigger={trigger}
+            icon={<SiJavascript />}
+            showLink={true}
+            tag='JavaScript'
+          />
           <SkillItem text={'C / C++'} percent={40} trigger={trigger} icon={<SiCplusplus />} />
           {/* <SkillItem text={'Bash Script'} percent={40} trigger={trigger} icon={<SiGnubash />} /> */}
         </div>
@@ -245,7 +285,14 @@ const Skills = () => {
         >
           <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>System & Software</h1>
           <SkillItem text={'Linux'} percent={70} trigger={trigger} icon={<SiLinux />} />
-          <SkillItem text={'Raspberry Pi'} percent={65} trigger={trigger} icon={<SiRaspberrypi />} showLink={true} tag='RaspberryPi'/>
+          <SkillItem
+            text={'Raspberry Pi'}
+            percent={65}
+            trigger={trigger}
+            icon={<SiRaspberrypi />}
+            showLink={true}
+            tag='RaspberryPi'
+          />
           <SkillItem text={'Docker'} percent={40} trigger={trigger} icon={<SiDocker />} />
         </div>
 
@@ -256,7 +303,14 @@ const Skills = () => {
           <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>Other</h1>
           <SkillItem text={'Clip Studio Paint'} percent={50} trigger={trigger} icon={<ClipStudioPaint />} />
           <SkillItem text={'AutoCAD'} percent={50} trigger={trigger} icon={<SiAutodesk />} />
-          <SkillItem text={'Blender'} percent={45} trigger={trigger} icon={<SiBlender />} showLink={true} tag='Blender'/>
+          <SkillItem
+            text={'Blender'}
+            percent={45}
+            trigger={trigger}
+            icon={<SiBlender />}
+            showLink={true}
+            tag='Blender'
+          />
           {/* <SkillItem text={"DaVinci Resolve"} percent={60} trigger={trigger} /> */}
         </div>
       </ScrollTrigger>
@@ -264,25 +318,23 @@ const Skills = () => {
   );
 };
 
-const SkillItem = ({ text, icon, percent, showLink=false, tag='', trigger }) => {
+const SkillItem = ({ text, icon, percent, showLink = false, tag = '', trigger }) => {
   return (
     <div className='mx-auto w-11/12 sm:w-5/6 my-4 flex items-center wrap justify-center'>
       <div className='text-2xl text-slate-800 dark:text-gray-300 mr-8'>{icon}</div>
       <div className='w-5/6'>
         <div className='flex items-center justify-between'>
-        {showLink ? 
-            <Link
-            href={`projects?tag=${tag}`}
-            >
-                <a
-            className='mb-1 text-md text-slate-800 dark:text-gray-300 flex items-center'>
-                {text} 
-                <FaSearch className='ml-2 text-xs'/>
-                </a>
-                </Link>
-            :<p className='mb-1 text-md text-slate-800 dark:text-gray-300'>{text}</p>
-    }
-        <p className='mb-1 text-md text-slate-800 dark:text-gray-300 '>{percent} %</p>
+          {showLink ? (
+            <Link href={`projects?tag=${tag}`}>
+              <a className='mb-1 text-md text-slate-800 dark:text-gray-300 flex items-center'>
+                {text}
+                <FaSearch className='ml-2 text-xs' />
+              </a>
+            </Link>
+          ) : (
+            <p className='mb-1 text-md text-slate-800 dark:text-gray-300'>{text}</p>
+          )}
+          <p className='mb-1 text-md text-slate-800 dark:text-gray-300 '>{percent} %</p>
         </div>
         <Expbar width={percent} barColor={'bg-secondary dark:bg-primary'} isTrigger={trigger} />
       </div>
@@ -335,8 +387,16 @@ const Experience = () => {
           <ul className='text-base font-normal text-gray-600 dark:text-gray-300 list-disc'>
             <p className='mb-1 font-semibold'>Others</p>
             <li className='ml-4 mb-2'>
-              Air pollution hands-on course with Raspberry Pi (from serial communication protocols to webhook with Flask
-              and Dialogflow).
+              Prepare <span>
+              <a
+                href='https://asgoshawk.github.io/NTUAS2021_AirPollutionLab/docs'
+                className='underline inline'
+                target='_blank'
+                rel='noreferrer noopener'
+              >
+                air pollution hands-on course
+              </a>
+              </span> with Raspberry Pi.
             </li>
             <li className='ml-4 mb-2'>Scientific manuscript of model simulation.</li>
           </ul>
@@ -389,8 +449,10 @@ const Education = () => {
             Sep. 2015 - Jun. 2018
           </time>
           <ul className='text-base font-normal text-gray-600 dark:text-gray-300 list-disc'>
-          <li className='ml-4 mb-2'>GPA : 3.58 / 4.3 ( 28 / 67 )</li>
-            <li className='ml-4 mb-2'>Transferred from Department of Chemistry, National Tsing Hua University (Sep. 2013 - Jun. 2015).</li>
+            <li className='ml-4 mb-2'>GPA : 3.58 / 4.3 ( 28 / 67 )</li>
+            <li className='ml-4 mb-2'>
+              Transferred from Department of Chemistry, National Tsing Hua University (Sep. 2013 - Jun. 2015).
+            </li>
           </ul>
         </li>
       </ul>
