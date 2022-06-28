@@ -3,12 +3,13 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import ScrollTrigger from 'react-scroll-trigger';
-import { FaLinkedin, FaGithub, FaCopyright, FaBlackTie, FaGraduationCap } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaCopyright, FaBlackTie, FaGraduationCap, FaLink, FaSearch } from 'react-icons/fa';
 import {
   SiReact,
   SiTailwindcss,
   SiExpress,
   SiMongodb,
+  SiInfluxdb,
   SiFirebase,
   SiPython,
   SiJavascript,
@@ -181,7 +182,7 @@ const About = () => {
                 data logger to <strong>full stack</strong> application including <strong>database</strong> and <strong>API</strong> builds.
             </div>
             <div className='text-left sm:text-justify'>
-                A nerdy guy, but open-mined, creative, and patient in teaching people technologies.
+                A nerdy guy, but open-minded, creative, and patient in teaching people technologies.
                 Having lots of hobbies such as plastic model and digital art; usually enjoying side projects, 3A games, and anime in the spare time. 
             </div>
         </div>
@@ -216,46 +217,46 @@ const Skills = () => {
       >
         <div
           className='relative w-full px-0 sm:px-4 py-4 rounded-2xl top-0 left-0
-                     hover:shadow-lg hover:top-0.5 hover:left-0.5 transition-all ease-in-out duration-800'
+                     hover:shadow-lg hover:top-0 hover:left-0 transition-all ease-in-out duration-800'
         >
           <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>Web Development</h1>
-          <SkillItem text={'React'} percent={75} trigger={trigger} icon={<SiReact />} />
-          <SkillItem text={'Tailwind CSS'} percent={70} trigger={trigger} icon={<SiTailwindcss />} />
-          <SkillItem text={'Node.js / Express'} percent={65} trigger={trigger} icon={<SiExpress />} />
-          {/* <SkillItem text={"InfluxDB"} percent={65} trigger={trigger} /> */}
-          <SkillItem text={'MongoDB'} percent={60} trigger={trigger} icon={<SiMongodb />} />
-          <SkillItem text={'Firebase'} percent={50} trigger={trigger} icon={<SiFirebase />} />
+          <SkillItem text={'React'} percent={60} trigger={trigger} icon={<SiReact />} showLink={true} tag='React'/>
+          <SkillItem text={'Tailwind CSS'} percent={55} trigger={trigger} icon={<SiTailwindcss />} showLink={true} tag='Tailwindcss'/>
+          <SkillItem text={'Express / Node.js'} percent={50} trigger={trigger} icon={<SiExpress />} showLink={true} tag='Express'/>
+          <SkillItem text={"InfluxDB"} percent={50} trigger={trigger} icon={<SiInfluxdb/>} showLink={true} tag='InfluxDB'/>
+          <SkillItem text={'MongoDB'} percent={45} trigger={trigger} icon={<SiMongodb />} showLink={true} tag='MongoDB'/>
+          {/* <SkillItem text={'Firebase'} percent={40} trigger={trigger} icon={<SiFirebase />} /> */}
         </div>
 
         <div
           className='relative w-full px-0 sm:px-4 py-4 rounded-2xl top-0 left-0
-                                hover:shadow-lg hover:top-0.5 hover:left-0.5 transition-all ease-in-out duration-800'
+                                hover:shadow-lg hover:top-0 hover:left-0 transition-all ease-in-out duration-800'
         >
           <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>Programing Language</h1>
-          <SkillItem text={'Python'} percent={80} trigger={trigger} icon={<SiPython />} />
-          <SkillItem text={'JavaScript'} percent={75} trigger={trigger} icon={<SiJavascript />} />
-          <SkillItem text={'C / C++'} percent={50} trigger={trigger} icon={<SiCplusplus />} />
-          <SkillItem text={'Bash Script'} percent={50} trigger={trigger} icon={<SiGnubash />} />
+          <SkillItem text={'Python'} percent={65} trigger={trigger} icon={<SiPython />} showLink={true} tag='Python'/>
+          <SkillItem text={'JavaScript'} percent={60} trigger={trigger} icon={<SiJavascript />} showLink={true} tag='JavaScript'/>
+          <SkillItem text={'C / C++'} percent={40} trigger={trigger} icon={<SiCplusplus />} />
+          {/* <SkillItem text={'Bash Script'} percent={40} trigger={trigger} icon={<SiGnubash />} /> */}
         </div>
 
         <div
           className='relative w-full px-0 sm:px-4 py-4 rounded-2xl top-0 left-0
-                                hover:shadow-lg hover:top-0.5 hover:left-0.5 transition-all ease-in-out duration-800'
+                                hover:shadow-lg hover:top-0 hover:left-0 transition-all ease-in-out duration-800'
         >
           <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>System & Software</h1>
-          <SkillItem text={'Linux'} percent={90} trigger={trigger} icon={<SiLinux />} />
-          <SkillItem text={'Raspberry Pi'} percent={85} trigger={trigger} icon={<SiRaspberrypi />} />
-          <SkillItem text={'Docker'} percent={50} trigger={trigger} icon={<SiDocker />} />
+          <SkillItem text={'Linux'} percent={70} trigger={trigger} icon={<SiLinux />} />
+          <SkillItem text={'Raspberry Pi'} percent={65} trigger={trigger} icon={<SiRaspberrypi />} showLink={true} tag='RaspberryPi'/>
+          <SkillItem text={'Docker'} percent={40} trigger={trigger} icon={<SiDocker />} />
         </div>
 
         <div
           className='relative w-full px-0 sm:px-4 py-4 rounded-2xl top-0 left-0
-                                hover:shadow-lg hover:top-0.5 hover:left-0.5 transition-all ease-in-out duration-800'
+                                hover:shadow-lg hover:top-0 hover:left-0 transition-all ease-in-out duration-800'
         >
           <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>Other</h1>
-          <SkillItem text={'Clip Studio Paint'} percent={65} trigger={trigger} icon={<ClipStudioPaint />} />
-          <SkillItem text={'AutoCAD'} percent={65} trigger={trigger} icon={<SiAutodesk />} />
-          <SkillItem text={'Blender'} percent={60} trigger={trigger} icon={<SiBlender />} />
+          <SkillItem text={'Clip Studio Paint'} percent={50} trigger={trigger} icon={<ClipStudioPaint />} />
+          <SkillItem text={'AutoCAD'} percent={50} trigger={trigger} icon={<SiAutodesk />} />
+          <SkillItem text={'Blender'} percent={45} trigger={trigger} icon={<SiBlender />} showLink={true} tag='Blender'/>
           {/* <SkillItem text={"DaVinci Resolve"} percent={60} trigger={trigger} /> */}
         </div>
       </ScrollTrigger>
@@ -263,12 +264,26 @@ const Skills = () => {
   );
 };
 
-const SkillItem = ({ text, icon, percent, trigger }) => {
+const SkillItem = ({ text, icon, percent, showLink=false, tag='', trigger }) => {
   return (
     <div className='mx-auto w-11/12 sm:w-5/6 my-4 flex items-center wrap justify-center'>
       <div className='text-2xl text-slate-800 dark:text-gray-300 mr-8'>{icon}</div>
       <div className='w-5/6'>
-        <p className='mb-1  text-md text-slate-800 dark:text-gray-300'> {text}</p>
+        <div className='flex items-center justify-between'>
+        {showLink ? 
+            <Link
+            href={`projects?tag=${tag}`}
+            >
+                <a
+            className='mb-1 text-md text-slate-800 dark:text-gray-300 flex items-center'>
+                {text} 
+                <FaSearch className='ml-2 text-xs'/>
+                </a>
+                </Link>
+            :<p className='mb-1 text-md text-slate-800 dark:text-gray-300'>{text}</p>
+    }
+        <p className='mb-1 text-md text-slate-800 dark:text-gray-300 '>{percent} %</p>
+        </div>
         <Expbar width={percent} barColor={'bg-secondary dark:bg-primary'} isTrigger={trigger} />
       </div>
     </div>
@@ -353,7 +368,7 @@ const Education = () => {
             Sep. 2018 - Jul. 2020
           </time>
           <ul className='text-base font-normal text-gray-600 dark:text-gray-300 list-disc'>
-            <li className='ml-4 mb-2'>GPA : 4.13 ( 5 / 14 )</li>
+            <li className='ml-4 mb-2'>GPA : 4.13 / 4.3 ( 5 / 14 )</li>
             <li className='ml-4 mb-2'>Researched in the new particle formation from monoterpene ozonolysis.</li>
           </ul>
         </li>
@@ -374,7 +389,7 @@ const Education = () => {
             Sep. 2015 - Jun. 2018
           </time>
           <ul className='text-base font-normal text-gray-600 dark:text-gray-300 list-disc'>
-          <li className='ml-4 mb-2'>GPA : 3.58 ( 28 / 67 )</li>
+          <li className='ml-4 mb-2'>GPA : 3.58 / 4.3 ( 28 / 67 )</li>
             <li className='ml-4 mb-2'>Transferred from Department of Chemistry, National Tsing Hua University (Sep. 2013 - Jun. 2015).</li>
           </ul>
         </li>

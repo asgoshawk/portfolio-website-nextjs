@@ -1,7 +1,7 @@
 ---
 title: 'Air Quality Box Project'
 excerpt: 'An IOT project for air quality monitoring using Raspberry Pi.'
-tags: ['Express', 'InfluxDB', 'JavaScript', 'Python', 'RaspberryPi']
+tags: ['Express', 'InfluxDB', 'JavaScript', 'Python', 'RaspberryPi', 'Blender']
 cover_image: '/images/projects/aqb-inner.jpg'
 priority: 0
 ---

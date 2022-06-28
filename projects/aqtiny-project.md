@@ -1,7 +1,7 @@
 ---
 title: 'AQtiny Project'
 excerpt: 'An IOT project of tiny air quality device using Raspberry Pi Pico.'
-tags: ['Python', 'MircoPython', 'InfluxDB', 'Grafana', 'RP2040']
+tags: ['Python', 'MircoPython', 'InfluxDB', 'Grafana', 'RaspberryPi']
 cover_image: '/images/projects/aqtiny-web.png'
 priority: 1
 ---
