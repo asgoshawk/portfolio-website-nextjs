@@ -12,6 +12,7 @@
     "@svgr/webpack": "^6.2.1",
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.7",
+    "express": "^4.18.1",
     "gray-matter": "^4.0.3",
     "next": "12.1.6",
     "next-mdx-remote": "^4.0.3",
