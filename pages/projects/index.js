@@ -90,7 +90,9 @@ export default Projects;
 
 export const getServerSideProps = async (context) => {
   // Get files from the projects dir
-  const files = fs.readdirSync(path.join('projects'));
+  const projectsDirectory = path.resolve(process.cwd(), "projects")
+//   const files = fs.readdirSync(path.join('projects'));
+  const files = fs.readdirSync(projectsDirectory);
 
   // Get slug and formatter from projects
   const projects = files.map((fileName) => {
@@ -98,7 +100,7 @@ export const getServerSideProps = async (context) => {
     const slug = fileName.replace('.md', '');
 
     // Get fronmatter
-    const markdownWithMeta = fs.readFileSync(path.join('projects', fileName), 'utf-8');
+    const markdownWithMeta = fs.readFileSync(path.join(projectsDirectory, fileName), 'utf-8');
 
     const { data: frontmatter } = matter(markdownWithMeta);
     return {
