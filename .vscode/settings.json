@@ -1,5 +1,8 @@
 {
-    "css.format.newlineBetweenRules": true,
-    "css.format.enable": false,
-    "prettier.printWidth": 120,
+  "css.format.newlineBetweenRules": true,
+  "css.format.enable": false,
+  "prettier.printWidth": 120,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

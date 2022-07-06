@@ -3,7 +3,17 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import ScrollTrigger from 'react-scroll-trigger';
-import { FaLinkedin, FaGithub, FaCopyright, FaBlackTie, FaGraduationCap, FaSearch } from 'react-icons/fa';
+import {
+  FaLinkedin,
+  FaGithub,
+  FaCopyright,
+  FaBlackTie,
+  FaGraduationCap,
+  FaSearch,
+  FaInfoCircle,
+  FaCaretUp,
+  FaCaretDown,
+} from 'react-icons/fa';
 import {
   SiReact,
   SiTailwindcss,
@@ -21,10 +31,12 @@ import {
   SiBlender,
   SiAutodesk,
 } from 'react-icons/si';
+import Explanation from '../public/assets/svg/Explanation.svg';
 import ClipStudioPaint from '../public/assets/svg/clip-studio.svg';
 import CircleProgress from '../components/CircleProgress';
 import Expbar from '../components/Expbar';
 import BackgroundImg from '../public/assets/png/street-rain.jpg';
+import InfoPopUp from '../components/InfoPopUp';
 
 const Profile = () => {
   const router = useRouter();
@@ -214,7 +226,15 @@ const Skills = () => {
   const [trigger, setTrigger] = useState(false);
   return (
     <div className='relative w-full my-8 px-4 md:px-0 md:w-5/6 lg:w-4/5 md:max-w-5xl'>
-      <h1 className='text-4xl md:text-5xl font-thin text-slate-800 dark:text-gray-300 pb-2'>SKILLS</h1>
+      <h1 className='text-4xl md:text-5xl font-thin text-slate-800 dark:text-gray-300 pb-2 flex items-center'>
+        SKILLS
+        <div className='relative text-xl ml-4 group'>
+          <FaInfoCircle className='opacity-40 group-hover:opacity-100 transition-opacity cursor-pointer duration-200 ease-in-out' />
+          <InfoPopUp>
+            <Explanation className=' w-screen sm:w-[32rem]' />
+          </InfoPopUp>
+        </div>
+      </h1>
       <ScrollTrigger
         className='w-full my-2 lg:grid lg:grid-cols-2 lg:gap-2'
         onEnter={() => setTrigger(true)}
@@ -225,10 +245,10 @@ const Skills = () => {
                      hover:shadow-lg hover:top-0 hover:left-0 transition-all ease-in-out duration-800'
         >
           <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>Web Development</h1>
-          <SkillItem text={'React'} percent={60} trigger={trigger} icon={<SiReact />} showLink={true} tag='React' />
+          <SkillItem text={'React'} percent={55} trigger={trigger} icon={<SiReact />} showLink={true} tag='React' />
           <SkillItem
             text={'Tailwind CSS'}
-            percent={55}
+            percent={50}
             trigger={trigger}
             icon={<SiTailwindcss />}
             showLink={true}
@@ -236,7 +256,7 @@ const Skills = () => {
           />
           <SkillItem
             text={'Express / Node.js'}
-            percent={50}
+            percent={45}
             trigger={trigger}
             icon={<SiExpress />}
             showLink={true}
@@ -244,7 +264,7 @@ const Skills = () => {
           />
           <SkillItem
             text={'InfluxDB'}
-            percent={50}
+            percent={40}
             trigger={trigger}
             icon={<SiInfluxdb />}
             showLink={true}
@@ -252,7 +272,7 @@ const Skills = () => {
           />
           <SkillItem
             text={'MongoDB'}
-            percent={45}
+            percent={30}
             trigger={trigger}
             icon={<SiMongodb />}
             showLink={true}
@@ -283,29 +303,29 @@ const Skills = () => {
           className='relative w-full px-0 sm:px-4 py-4 rounded-2xl top-0 left-0
                                 hover:shadow-lg hover:top-0 hover:left-0 transition-all ease-in-out duration-800'
         >
-          <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>System & Software</h1>
-          <SkillItem text={'Linux'} percent={70} trigger={trigger} icon={<SiLinux />} />
+          <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>DevOps & Others</h1>
           <SkillItem
             text={'Raspberry Pi'}
-            percent={65}
+            percent={60}
             trigger={trigger}
             icon={<SiRaspberrypi />}
             showLink={true}
             tag='RaspberryPi'
           />
-          <SkillItem text={'Docker'} percent={40} trigger={trigger} icon={<SiDocker />} />
+          <SkillItem text={'Linux'} percent={55} trigger={trigger} icon={<SiLinux />} />
+          <SkillItem text={'Docker'} percent={30} trigger={trigger} icon={<SiDocker />} />
         </div>
 
         <div
           className='relative w-full px-0 sm:px-4 py-4 rounded-2xl top-0 left-0
                                 hover:shadow-lg hover:top-0 hover:left-0 transition-all ease-in-out duration-800'
         >
-          <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>Other</h1>
-          <SkillItem text={'Clip Studio Paint'} percent={50} trigger={trigger} icon={<ClipStudioPaint />} />
-          <SkillItem text={'AutoCAD'} percent={50} trigger={trigger} icon={<SiAutodesk />} />
+          <h1 className=' text-2xl font-medium text-slate-800 dark:text-gray-300 mb-2'>Design Tool</h1>
+          <SkillItem text={'Clip Studio Paint'} percent={45} trigger={trigger} icon={<ClipStudioPaint />} />
+          <SkillItem text={'AutoCAD'} percent={40} trigger={trigger} icon={<SiAutodesk />} />
           <SkillItem
             text={'Blender'}
-            percent={45}
+            percent={40}
             trigger={trigger}
             icon={<SiBlender />}
             showLink={true}
@@ -387,16 +407,18 @@ const Experience = () => {
           <ul className='text-base font-normal text-gray-600 dark:text-gray-300 list-disc'>
             <p className='mb-1 font-semibold'>Others</p>
             <li className='ml-4 mb-2'>
-              Prepare <span>
-              <a
-                href='https://asgoshawk.github.io/NTUAS2021_AirPollutionLab/docs'
-                className='underline inline'
-                target='_blank'
-                rel='noreferrer noopener'
-              >
-                air pollution hands-on course
-              </a>
-              </span> with Raspberry Pi.
+              Prepare{' '}
+              <span>
+                <a
+                  href='https://asgoshawk.github.io/NTUAS2021_AirPollutionLab/docs'
+                  className='underline inline'
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  air pollution hands-on course
+                </a>
+              </span>{' '}
+              with Raspberry Pi.
             </li>
             <li className='ml-4 mb-2'>Scientific manuscript of model simulation.</li>
           </ul>
